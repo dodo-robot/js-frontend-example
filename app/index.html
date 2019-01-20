@@ -25,15 +25,15 @@
   <div class="row">
     <div class="row__medium-6">
         <div class="wrapper"> 
-          
+
             <h2 class="headline">Insert a person name to calculate fancy metrics</h2>
 
-            <form action="/action_page.php" method="get" class="form">
+            <form class="form">
               <label class="form__label" for="fname">First Name</label>
-              <input class="form__input" type="text" name="fname">
+              <input class="form__input" type="text" id="fname" name="fname" value="">
 
               <label class="form__label" for="lname">Last Name</label>
-              <input class="form__input" type="text" name="lname">
+              <input class="form__input" type="text" id="lname" name="lname" value="">
 
               <input type="submit" value="Submit" class="form__btn">
             </form>
@@ -41,6 +41,43 @@
     </div>
 
     <div class="row__medium-6">
+
+        <div class="wrapper"> 
+
+            <h2 class="headline">Persons already inserted</h2>
+
+            <table class="blueTable">
+                <thead>
+                    <tr>
+                        <th><label>First Name</label></th>
+                        <th><label>Last Name</label></th>
+                        <th><label>Metrics</label></th> 
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    
+                </tbody>   
+                
+                <tfoot>
+                    <tr>
+                    <td colspan="4">
+                    <div class="links">
+                        <a href="#">&laquo;</a> 
+                        <a class="active" href="#">1</a>
+                        <a href="#">2</a> 
+                        <a href="#">3</a> 
+                        <a href="#">4</a> 
+                        <a href="#">&raquo;</a></div>
+                    </td>
+                    </tr>
+                  </tfoot>
+
+            </table>
+
+        </div>
+
+
     </div>
 
 </div>

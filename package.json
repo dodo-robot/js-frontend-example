@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "ajv": "^6.6.2",
+    "axios": "^0.18.0",
     "lazysizes": "^4.0.1",
     "normalize.css": "7.0.0",
     "picturefill": "^3.0.2",
