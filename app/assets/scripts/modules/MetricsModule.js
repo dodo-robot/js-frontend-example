@@ -2,38 +2,43 @@ import axios from 'axios';
 
 class MetricsModule {
     constructor(){
-        this.submitBtn = document.getElementsByClassName('form__btn'); 
-        this.events();
+        this.buttons = document.getElementsByTagName('button'); 
+        this.ascii = document.getElementsByClassName('metrics--ascii')[0]; 
+        this.binary = document.getElementsByClassName('metrics--binary')[0]; 
+        this.zeros = document.getElementsByClassName('metrics--zeros')[0]; 
+        
+        for (let i = 0; i < this.buttons.length; i++) {
+            this.buttons[i].onclick = this.onClick.bind(this);
+          }
     }
 
-    events() {  
-        this.submitBtn[0].onclick = this.onClick.bind(this);
+    _setConsecutiveZero(value){
+        this.zeros.textContent = value;
     }
 
-    _validate(firstName, lastName){
-        console.log(firstName);
-        console.log(lastName);
-         return  (firstName!=null && firstName !== '' &&
-                    lastName!=null && lastName!== '') ?  true : false;
+    _setAsciiSum(value){
+        this.ascii.textContent = value;
     }
+
+    _setBinary(value){
+        this.binary.textContent = value;
+    }
+
 
     onClick(e) {
         e.preventDefault();
-
-        console.log(e);
-         
-        axios.get('http://localhost:8080/api/v1/metrics/1')
+        var that = this;
+        axios.get('http://localhost:8080/api/v1/metrics/'+e.target.id)
         .then(function (response) {
-            console.log(response);
+            console.log(response.data);
+            that._setConsecutiveZero(response.data.consecutiveZeros);
+            that._setAsciiSum(response.data.asciiSum);
+            that._setBinary(response.data.binary);
         })
         .catch(function (response) {
             console.log(response);
         });
   
-
-        // this.menuContent[0].classList.toggle("site-header__menu-content--is-visible"); 
-        // this.siteHeader[0].classList.toggle("site-header--is-expanded"); 
-        // this.menuIcon[0].classList.toggle("site-header__menu-icon--close-x");
     }
 }
 

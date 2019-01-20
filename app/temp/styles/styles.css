@@ -667,83 +667,131 @@ a {
     text-align: center;
 }
 
-table.blueTable {
-  border: 1px solid #1C6EA4;
-  background-color: #EEEEEE;
-  width: 80%;
-  margin: 0 auto;
-  text-align: left;
+.blueTable {
   border-collapse: collapse;
+  margin: 0 auto;
+  width: 90%; 
+
 }
 
-table.blueTable td, table.blueTable th {
-  border: 1px solid #AAAAAA;
-  padding: 6px 4px;
-}
+.blueTable table{
+    border: 1px solid #1C6EA4;
+    background-color: #EEEEEE;
+  }
 
-table.blueTable tbody td {
-  font-size: 15px;
-}
+.blueTable td, .blueTable th {
+    border: 1px solid #AAAAAA;
+    padding: 6px 4px;
+  }
 
-table.blueTable tr:nth-child(even) {
-  background: #D0E4F5;
-}
+.blueTable tbody td {
+    font-size: 18px;
+    text-align: center;
+    color: #2f5572;
+    font-weight: 400;
+  }
 
-table.blueTable tr:hover {
-  cursor: pointer;
-}
+.blueTable tbody tr:nth-child(even) {
+    background: #D0E4F5;
+  }
 
-table.blueTable thead {
-  background: #1C6EA4;
-  background: -webkit-gradient(linear, left top, left bottom, from(#5592bb), color-stop(66%, #327cad), to(#1C6EA4));
-  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-  border-bottom: 2px solid #444444;
-}
+.blueTable button:hover {
+    cursor: pointer;
+  }
 
-table.blueTable thead th {
-  font-size: 18px;
-  font-weight: bold;
-  color: #FFFFFF;
-  border-left: 2px solid #D0E4F5;
-}
+.blueTable button {
+    background-color: #2f5572;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5592bb), color-stop(66%, #327cad), to(#1C6EA4));
+    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    width: 100%;
+    color: white;
+  }
 
-table.blueTable thead th:first-child {
-  border-left: none;
-}
+.blueTable thead {
+    background: #2f5572;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5592bb), color-stop(66%, #327cad), to(#1C6EA4));
+    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    border-bottom: 2px solid #444444;
+  }
 
-table.blueTable tfoot {
-  font-size: 14px;
-  font-weight: bold;
-  color: #FFFFFF;
-  background: #D0E4F5;
-  background: -webkit-gradient(linear, left top, left bottom, from(#dcebf7), color-stop(66%, #d4e6f6), to(#D0E4F5));
-  background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-  border-top: 2px solid #444444;
-}
+.blueTable thead th {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+  }
 
-table.blueTable tfoot td {
-  font-size: 14px;
-}
+.blueTable thead th:first-child {
+    border-left: none;
+  }
 
-table.blueTable tfoot .links {
-  text-align: right;
-}
+.blueTable tbody td:first-child {
+    display: none;
+  }
 
-table.blueTable tfoot .links a{
-  display: inline-block;
-  background: #1C6EA4;
-  color: #FFFFFF;
-  padding: 2px 8px;
-  border-radius: 5px;
-}
+.blueTable tfoot {
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #D0E4F5;
+    background: -webkit-gradient(linear, left top, left bottom, from(#dcebf7), color-stop(66%, #d4e6f6), to(#D0E4F5));
+    background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+    border-top: 2px solid #444444;
+  }
+
+.blueTable tfoot td {
+    font-size: 14px;
+  }
+
+.blueTable tfoot .links {
+    text-align: right;
+  }
+
+.blueTable tfoot .links a{
+    display: inline-block;
+    background: #2f5572;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+  }
 
 .metrics{
 
     width: 100%;
-    margin: 50px 0 0 0;
+    margin: 10px 0 0 50px;
+    text-align: left;
+    float: right;
+
+    
 }
 
 .metrics__label{
+        width: 40%;
+        font-size: 1.875rem;
+        margin-top: 100px;
+        padding-left: 50px;
+        float: left;
+    }
+
+.metrics__value{
+        font-size: 1.875rem;
+    }
+
+.metrics--ascii{
+        margin-top: 100px;
+        width: 40%;
+        font-size: 2.875rem;
+    }
+
+.metrics--zeros{
+         margin-top: 100px;
+        width: 40%;
+        font-size: 1.875rem;
+    }
+
+.metrics--binary{
+         margin-top: 100px;
+        width: 40%;
         font-size: 1.875rem;
     }
 

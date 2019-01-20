@@ -1,9 +1,39 @@
 .metrics{
 
     width: 100%;
-    margin: 50px 0 0 0;
+    margin: 10px 0 0 50px;
+    text-align: left;
+    float: right;
 
     &__label{
+        width: 40%;
+        font-size: 1.875rem;
+        margin-top: 100px;
+        padding-left: 50px;
+        float: left;
+    }
+
+    &__value{
         font-size: 1.875rem;
     }
+
+    &--ascii{
+        margin-top: 100px;
+        width: 40%;
+        font-size: 2.875rem;
+    }
+
+    &--zeros{
+         margin-top: 100px;
+        width: 40%;
+        font-size: 1.875rem;
+    }
+
+    &--binary{
+         margin-top: 100px;
+        width: 40%;
+        font-size: 1.875rem;
+    }
+
+    
 }

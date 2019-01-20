@@ -1,4 +1,5 @@
 import axios from 'axios';
+import MetricsModule from './MetricsModule'; 
 
 class TableModule {
     constructor(){
@@ -13,21 +14,22 @@ class TableModule {
         newCell.appendChild(newText);
     }
 
-    _createTableButton(newRow, index){
+    _createTableButton(newRow, id, index){
         var newCell  = newRow.insertCell(index);
-        
         var button = document.createElement("button");
-        button.innerHTML = "Get Metrics";
-
+        button.innerHTML = "get metrics";
+        button.id = id;
         newCell.appendChild(button);
     }
 
-    _insertData(firstName, lastName){
+    _insertData(element){
         var newRow   = this.tableBody.insertRow(this.tableBody.rows.length);
         // Insert a cell in the row at index 0
-        this._createTableCell(newRow, firstName, 0);
-        this._createTableCell(newRow, lastName, 1);
-        this._createTableButton(newRow, 2);
+        this._createTableCell(newRow, element.id, 0);
+        this._createTableCell(newRow, element.firstName, 1);
+        this._createTableCell(newRow, element.lastName, 2);
+        this._createTableButton(newRow, element.id, 3);
+        
     }
 
     onUpdate(e) {
@@ -37,9 +39,10 @@ class TableModule {
         .then(function (response) {
           
             response.data.forEach(element => {
-                that._insertData(element.firstName, element.lastName);
-            });
+                that._insertData(element);
+            })
             
+            var metricsModule = new MetricsModule();
         })
         .catch(function (response) {
             console.log(response);
