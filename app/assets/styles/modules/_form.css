@@ -1,0 +1,27 @@
+.form{
+    
+    margin: 50px 0 0 0;
+
+    &__input{
+        /* position:relative; */
+        padding:.25rem;
+        border-radius: 2%;
+        margin:0px;
+        width: 30%;
+    }
+
+    &__label{
+        position:relative;
+        top:-35px;
+        left: 80px;
+    }
+
+    &__btn{
+        background-color: $mainOrange;
+        float:right;
+        margin-right: 50px;
+         padding:.25rem;
+    }
+
+    
+}
