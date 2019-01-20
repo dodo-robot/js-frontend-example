@@ -644,7 +644,6 @@ a {
 }
 
 .form__input{
-        /* position:relative; */
         padding:.25rem;
         border-radius: 2%;
         margin:0px;
@@ -671,7 +670,8 @@ a {
 table.blueTable {
   border: 1px solid #1C6EA4;
   background-color: #EEEEEE;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   text-align: left;
   border-collapse: collapse;
 }
@@ -687,6 +687,10 @@ table.blueTable tbody td {
 
 table.blueTable tr:nth-child(even) {
   background: #D0E4F5;
+}
+
+table.blueTable tr:hover {
+  cursor: pointer;
 }
 
 table.blueTable thead {
@@ -733,6 +737,15 @@ table.blueTable tfoot .links a{
   border-radius: 5px;
 }
 
+.metrics{
+
+    width: 100%;
+    margin: 50px 0 0 0;
+}
+
+.metrics__label{
+        font-size: 1.875rem;
+    }
 
 
 

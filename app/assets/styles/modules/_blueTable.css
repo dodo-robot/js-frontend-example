@@ -1,7 +1,8 @@
 table.blueTable {
   border: 1px solid #1C6EA4;
   background-color: #EEEEEE;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   text-align: left;
   border-collapse: collapse;
 }
@@ -15,6 +16,11 @@ table.blueTable tbody td {
 table.blueTable tr:nth-child(even) {
   background: #D0E4F5;
 }
+
+table.blueTable tr:hover {
+  cursor: pointer;
+}
+
 table.blueTable thead {
   background: #1C6EA4;
   background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);

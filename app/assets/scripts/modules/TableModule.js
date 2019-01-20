@@ -7,21 +7,27 @@ class TableModule {
         this.onUpdate();
     }
 
-    events() {  
-    }
-
-    _createTableRow(newRow, value, index){
+    _createTableCell(newRow, value, index){
         var newCell  = newRow.insertCell(index);
         var newText  = document.createTextNode(value);
         newCell.appendChild(newText);
     }
 
+    _createTableButton(newRow, index){
+        var newCell  = newRow.insertCell(index);
+        
+        var button = document.createElement("button");
+        button.innerHTML = "Get Metrics";
+
+        newCell.appendChild(button);
+    }
+
     _insertData(firstName, lastName){
         var newRow   = this.tableBody.insertRow(this.tableBody.rows.length);
         // Insert a cell in the row at index 0
-        this._createTableRow(newRow, firstName, 0);
-        this._createTableRow(newRow, lastName, 1);
-        this._createTableRow(newRow, firstName, 2);
+        this._createTableCell(newRow, firstName, 0);
+        this._createTableCell(newRow, lastName, 1);
+        this._createTableButton(newRow, 2);
     }
 
     onUpdate(e) {
