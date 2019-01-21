@@ -3,9 +3,9 @@ import axios from 'axios';
 class MetricsModule {
     constructor(){
         this.buttons = document.getElementsByTagName('button'); 
-        this.ascii = document.getElementsByClassName('metrics--ascii')[0]; 
-        this.binary = document.getElementsByClassName('metrics--binary')[0]; 
-        this.zeros = document.getElementsByClassName('metrics--zeros')[0]; 
+        this.ascii = document.getElementsByClassName('metrics__value--ascii')[0]; 
+        this.binary = document.getElementsByClassName('metrics__value--binary')[0]; 
+        this.zeros = document.getElementsByClassName('metrics__value--zeros')[0]; 
         
         for (let i = 0; i < this.buttons.length; i++) {
             this.buttons[i].onclick = this.onClick.bind(this);
@@ -14,6 +14,7 @@ class MetricsModule {
 
     _setConsecutiveZero(value){
         this.zeros.textContent = value;
+        this.zeros.classList.add("")
     }
 
     _setAsciiSum(value){

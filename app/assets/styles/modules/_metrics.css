@@ -1,39 +1,63 @@
 .metrics{
 
     width: 100%;
-    margin: 10px 0 0 50px;
     text-align: left;
-    float: right;
 
     &__label{
-        width: 40%;
+        width: 100%;
         font-size: 1.875rem;
         margin-top: 100px;
-        padding-left: 50px;
-        float: left;
+        text-align: center;
+
+    }
+
+    &__label:first-child {
+        margin-top: 50px;
     }
 
     &__value{
-        font-size: 1.875rem;
-    }
-
-    &--ascii{
         margin-top: 100px;
-        width: 40%;
-        font-size: 2.875rem;
+        font-size: 1.875rem;
+        text-align: center;
+        transition: all .3s ease-out;
+
+        &--ascii{
+            color: red;
+        }
+
+        &--ascii:hover{
+            color: blue;
+            transform: scale(3); 
+            transform-origin: 50% 50%;
+        }
+        
+
+        &--zeros{
+            color: green;
+        }
+
+        &--zeros:hover{
+            color: blue;
+            transform: scale(3); 
+            transform-origin: 50% 50%;
+        }
+
+        &--binary{
+           color: yellow; 
+        }
+
+        &--binary:hover{
+            color: blue;
+            transform: scale(2); 
+            transform-origin: 50% 50%;
+        }
     }
 
-    &--zeros{
-         margin-top: 100px;
-        width: 40%;
-        font-size: 1.875rem;
+    &__value:first-child {
+        margin-top: 50px;
     }
 
-    &--binary{
-         margin-top: 100px;
-        width: 40%;
-        font-size: 1.875rem;
-    }
+    
 
     
 }
