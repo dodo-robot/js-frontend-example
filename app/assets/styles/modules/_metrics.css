@@ -1,7 +1,14 @@
 .metrics{
 
+    
     width: 100%;
     text-align: left;
+    padding-right: 50px;
+    padding-left: 50px;
+
+    & .headline{
+        margin-bottom: 150px;
+    }
 
     &__label{
         width: 100%;

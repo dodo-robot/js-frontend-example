@@ -473,12 +473,17 @@ a {
 .header{
     margin-top:0px;
     width: 100%;
-    height: 12.50rem;
+    height: 5rem;
     background-color:#2f5572; 
     color:#FFF;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 1.4375rem;
 }
+
+.header h1{
+        margin: 0;
+        padding: 0px;
+    }
 
 .row {
 
@@ -493,37 +498,45 @@ a {
         display: table;
     }
 
-/* &--gutters {
+.row--gutters {
+        margin-right: -60px;
+    }
+
+.row--gutters > div {
+        padding-right: 50px;
+    }
+
+.row--gutters {
         margin-right: -65px;
     }
 
-    &--gutters > div {
+.row--gutters > div {
         padding-right: 65px;
     }
 
-    &--gutters-small {
+.row--gutters-small {
         margin-right: -45px;
     }
 
-    &--gutters-small > div {
+.row--gutters-small > div {
         padding-right: 45px;
     }
 
-    &--gutters-large {
-        margin-right: -100px;
+.row--gutters-large {
+        margin-right: -5px;
     }
 
-    &--gutters-large > div {
-        padding-right: 100px;
+.row--gutters-large > div {
+        padding-right: 5px;
     }
 
-    &__b-margin-until-medium {
+.row__b-margin-until-medium {
         margin-bottom: 1rem;
     }
 
-    &--t-padding {
+.row--t-padding {
         padding-top: 80px;
-    } */
+    }
 
 @media (min-width: 800px) {
         
@@ -560,7 +573,7 @@ a {
         }
     }
 
-@media (min-width: 1010px) {
+@media (min-width: 1200px) {
         
         .row__b-margin-until-large {
             margin-bottom: 1rem;
@@ -578,7 +591,7 @@ a {
 
         .row__large-4 {
             float: left;
-            width: 5%;
+            width: 33%;
         }
 
         .row__large-4--larger { 
@@ -615,7 +628,7 @@ a {
 
 /* to do so we just need to add .flexbox selector so that modernizr */
 
-@media (min-width: 1010px) {
+@media (min-width: 1200px) {
 
 .flexbox  .row--equal-height-at-large {
             display: -webkit-box;
@@ -634,33 +647,126 @@ a {
 .wrapper{
     padding:20px;
     min-height: 500px;
+
+  
 }
 
 .form{
-    
-    margin: 50px 0 50px 0;
+    margin: 0 auto;
+    margin-bottom:50px;
+    width: 90%;
 
     
 }
 
-.form__input{
-        padding:.25rem;
-        border-radius: 2%;
-        margin:0px;
-        width: 30%;
-    }
-
-.form__label{
-        position:relative;
-        top:-35px;
-        left: 80px;
-    }
-
 .form__btn{
-        background-color: #d59541;
-        float:right;
-        margin-right: 50px;
-         padding:.25rem;
+        display: block;
+        border: none;
+        text-decoration: none;
+        background: #2f5572;
+        color: #ffffff;
+        font-family: sans-serif;
+        cursor: pointer;
+        text-align: center;
+        -webkit-transition: background 250ms ease-in-out, 
+                    -webkit-transform 150ms ease;
+        transition: background 250ms ease-in-out, 
+                    -webkit-transform 150ms ease;
+        transition: background 250ms ease-in-out, 
+                    transform 150ms ease;
+        transition: background 250ms ease-in-out, 
+                    transform 150ms ease, 
+                    -webkit-transform 150ms ease;
+    }
+
+.form__btn:hover,
+    .form__btn:focus {
+        background: #d59541;
+    }
+
+.form__btn:focus {
+        outline: 1px solid #fff;
+        outline-offset: -4px;
+    }
+
+.form__btn:active {
+        -webkit-transform: scale(0.90);
+                transform: scale(0.90);
+    }
+
+@media (min-width: 1200px) {
+        
+        .form__btn{
+            -webkit-transform: translate(-10%, 190%) !important;
+                    transform: translate(-10%, 190%) !important;
+        }
+
+        .form__input{
+            padding:.25rem;
+            border-radius: 2%;
+            margin: 10px;
+            float: right;
+            width: 80%;
+        }
+
+
+        .form__label{
+            margin: 0px;
+            margin-top: 0px;
+            top: 10px;
+            left: 30px;
+            position:relative;
+        }
+    }
+
+@media (min-width: 800px) {
+
+        
+        .form__btn{
+            padding: .35rem;
+            width: 50%;
+            margin: 0 10px;
+            float: right;
+            font-size: 1rem;
+            -webkit-transform: translateY(65%);
+                    transform: translateY(65%);
+        }
+
+   
+        .form__input{
+            padding:.25rem;
+            border-radius: 2%;
+            margin: 10px;
+            float: right;
+            width: 80%;
+        }
+
+        .form__label{
+            margin: 10px;
+            margin-top: 18px;
+            float: left;
+            position:relative;
+        }
+    }
+
+@media (min-width: 530px) {
+
+.form{
+/* 
+        &__input{
+            padding:.25rem;
+            border-radius: 2%;
+            margin:0px;
+            width: 100%;
+        }
+
+        &__label{
+            position:relative;
+            top:-5px;
+        } */
+
+    
+}
     }
 
 .headline{
@@ -670,30 +776,71 @@ a {
 .blueTable {
   border-collapse: collapse;
   margin: 0 auto;
-  width: 90%; 
+  width: 90%;
+
+
+
 
 }
 
 .blueTable table{
     border: 1px solid #1C6EA4;
     background-color: #EEEEEE;
+    table-layout:fixed;
   }
 
 .blueTable td, .blueTable th {
+      border: 1px solid #AAAAAA;
+      padding: 6px 4px;
+  }
+
+.blueTable td:last-child, .blueTable th:last-child {
     border: 1px solid #AAAAAA;
     padding: 6px 4px;
   }
 
-.blueTable tbody td {
-    font-size: 18px;
-    text-align: center;
-    color: #2f5572;
-    font-weight: 400;
+.blueTable tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;/* even columns width , fix width of table too*/
   }
 
-.blueTable tbody tr:nth-child(even) {
-    background: #D0E4F5;
+.blueTable tbody{
+    display: block;
+    overflow-y:auto;
+    height:400px;
+    width:100%;
   }
+
+.blueTable tbody td {
+      font-size: 18px;
+      text-align: center;
+      color: #2f5572;
+      font-weight: 400;
+    }
+
+.blueTable tbody td:first-child {
+      display: none;
+    }
+
+.blueTable tbody tr:nth-child(even) {
+      background: #D0E4F5;
+    }
+
+.blueTable thead {
+    display: block;
+    background: #2f5572;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5592bb), color-stop(66%, #327cad), to(#1C6EA4));
+    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    border-bottom: 2px solid #444444;
+  }
+
+.blueTable thead th {
+      font-size: 18px;
+      font-weight: bold;
+      color: #FFFFFF;
+      border-left: 2px solid #D0E4F5;
+    }
 
 .blueTable button:hover {
     cursor: pointer;
@@ -707,63 +854,48 @@ a {
     color: white;
   }
 
-.blueTable thead {
-    background: #2f5572;
-    background: -webkit-gradient(linear, left top, left bottom, from(#5592bb), color-stop(66%, #327cad), to(#1C6EA4));
-    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-    border-bottom: 2px solid #444444;
-  }
-
-.blueTable thead th {
-    font-size: 18px;
-    font-weight: bold;
-    color: #FFFFFF;
-    border-left: 2px solid #D0E4F5;
-  }
-
-.blueTable thead th:first-child {
-    border-left: none;
-  }
-
-.blueTable tbody td:first-child {
-    display: none;
-  }
-
 .blueTable tfoot {
     font-size: 14px;
     font-weight: bold;
     color: #FFFFFF;
-    background: #D0E4F5;
-    background: -webkit-gradient(linear, left top, left bottom, from(#dcebf7), color-stop(66%, #d4e6f6), to(#D0E4F5));
-    background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-    border-top: 2px solid #444444;
+    background: #2f5572;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5592bb), color-stop(66%, #327cad), to(#1C6EA4));
+    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    border-top: 2px solid #444444; 
   }
 
-.blueTable tfoot td {
-    font-size: 14px;
-  }
+.blueTable tfoot  td {
+      font-size: 14px;
+    }
 
 .blueTable tfoot .links {
-    text-align: right;
-  }
+      text-align: right;
+    }
 
 .blueTable tfoot .links a{
-    display: inline-block;
-    background: #2f5572;
-    color: #FFFFFF;
-    padding: 2px 8px;
-    border-radius: 5px;
-  }
+      display: inline-block;
+      background: #2f5572;
+      color: #FFFFFF;
+      padding: 2px 8px;
+      border-radius: 5px;
+    }
 
 .metrics{
 
+    
     width: 100%;
     text-align: left;
+    padding-right: 50px;
+    padding-left: 50px;
 
     
 
     
 }
+
+.metrics .headline{
+        margin-bottom: 150px;
+    }
 
 .metrics__label{
         width: 100%;

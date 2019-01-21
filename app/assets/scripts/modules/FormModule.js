@@ -1,8 +1,10 @@
 import axios from 'axios';
+import EventListener from './EventListener';
 
 class FormModule {
     constructor(){
         this.submitBtn = document.getElementsByClassName('form__btn'); 
+        this.listener = EventListener.getInstance();
         this.events();
     }
 
@@ -27,9 +29,11 @@ class FormModule {
                     firstName: firstName,
                     lastName: lastName
                 }
+            let that = this;
             axios.post('http://localhost:8080/api/v1/persons', person)
             .then(function (response) {
                 console.log(response);
+                that.listener.dispatchEvent({type:'update'});
             })
             .catch(function (response) {
                 console.log(response);
@@ -37,11 +41,6 @@ class FormModule {
         }else{
             console.log("segnala errore");
         }
-  
-
-        // this.menuContent[0].classList.toggle("site-header__menu-content--is-visible"); 
-        // this.siteHeader[0].classList.toggle("site-header--is-expanded"); 
-        // this.menuIcon[0].classList.toggle("site-header__menu-icon--close-x");
     }
 }
 

@@ -14,7 +14,6 @@ class MetricsModule {
 
     _setConsecutiveZero(value){
         this.zeros.textContent = value;
-        this.zeros.classList.add("")
     }
 
     _setAsciiSum(value){

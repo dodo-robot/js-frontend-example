@@ -1,10 +1,19 @@
 import axios from 'axios';
 import MetricsModule from './MetricsModule'; 
+import EventListener from './EventListener';
+
 
 class TableModule {
     constructor(){
         this.tableBody = document.getElementsByClassName("blueTable")[0].getElementsByTagName("tbody")[0];
-        // this.submitBtn = document.getElementsByClassName('form__btn'); 
+        // this.submitBtn = document.getElementsByClassName('form__btn');
+        this.listener = EventListener.getInstance();
+
+        let that = this;
+        this.listener.addEvent('update', function(){
+            that.onUpdate();
+        });
+
         this.onUpdate();
     }
 

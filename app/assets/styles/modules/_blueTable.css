@@ -3,90 +3,108 @@
   margin: 0 auto;
   width: 90%;
 
-  table{
+  & table{
     border: 1px solid #1C6EA4;
     background-color: #EEEEEE;
+    table-layout:fixed;
   }
 
-  td, th {
+  & td, th {
+      border: 1px solid #AAAAAA;
+      padding: 6px 4px;
+  }
+  
+  & td:last-child, th:last-child {
     border: 1px solid #AAAAAA;
     padding: 6px 4px;
   }
 
-
-  tbody td {
-    font-size: 18px;
-    text-align: center;
-    color: $mainBlue;
-    font-weight: 400;
+  & tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;/* even columns width , fix width of table too*/
   }
 
+  & tbody{
+    display: block;
+    overflow-y:auto;
+    height:400px;
+    width:100%;
 
-  tbody tr:nth-child(even) {
-    background: #D0E4F5;
+    & td {
+      font-size: 18px;
+      text-align: center;
+      color: $mainBlue;
+      font-weight: 400;
+    }
+
+    & td:first-child {
+      display: none;
+    }
+
+    & tr:nth-child(even) {
+      background: #D0E4F5;
+    }
   }
+ 
+  & thead {
+    display: block;
+    background: $mainBlue;
+    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    border-bottom: 2px solid #444444;
 
-  button:hover {
+      & th {
+      font-size: 18px;
+      font-weight: bold;
+      color: #FFFFFF;
+      border-left: 2px solid #D0E4F5;
+    }
+  }
+ 
+
+  & button:hover {
     cursor: pointer;
   }
 
-  button {
+  & button {
     background-color: $mainBlue;
     background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
     width: 100%;
     color: white;
   }
 
-  thead {
+
+
+
+  & tfoot {
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
     background: $mainBlue;
     background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-    border-bottom: 2px solid #444444;
-  }
-
-
-  thead th {
-    font-size: 18px;
-    font-weight: bold;
-    color: #FFFFFF;
-    border-left: 2px solid #D0E4F5;
-  }
-
-
-  thead th:first-child {
-    border-left: none;
-  }
-
-  tbody td:first-child {
-    display: none;
-  }
-
-  tfoot {
-    font-size: 14px;
-    font-weight: bold;
-    color: #FFFFFF;
-    background: #D0E4F5;
-    background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
     border-top: 2px solid #444444;
+
+      &  td {
+      font-size: 14px;
+    }
+
+
+    & .links {
+      text-align: right;
+    }
+
+
+    & .links a{
+      display: inline-block;
+      background: $mainBlue;
+      color: #FFFFFF;
+      padding: 2px 8px;
+      border-radius: 5px;
+    } 
   }
 
 
-  tfoot td {
-    font-size: 14px;
-  }
 
-
-  tfoot .links {
-    text-align: right;
-  }
-
-
-  tfoot .links a{
-    display: inline-block;
-    background: $mainBlue;
-    color: #FFFFFF;
-    padding: 2px 8px;
-    border-radius: 5px;
-  } 
 
 }
 

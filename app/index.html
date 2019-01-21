@@ -18,70 +18,79 @@
 <body>
 
   <header class="header">
-    <h1 >Magic Metrics</h1>
+    <h1>Magic Metrics</h1>
   </header>
 
 
   <div class="row">
-    <div class="row__medium-6">
+    <div class="row__large-6">
         <div class="wrapper"> 
 
             <h2 class="headline">Insert a new Person</h2>
 
             <form class="form">
-              <label class="form__label" for="fname">First Name</label>
-              <input class="form__input" type="text" id="fname" name="fname" value="">
 
-              <label class="form__label" for="lname">Last Name</label>
-              <input class="form__input" type="text" id="lname" name="lname" value="">
+                    <div class="row">
+                        <div class="row__large-4">
+                                <label class="form__label" for="fname">First Name</label>
+                                <input class="form__input" type="text" id="fname" name="fname" value="">
+                        </div>
+                        <div class="row__large-4" >
+                                <label class="form__label" for="lname">Last Name</label>
+                                <input class="form__input" type="text" id="lname" name="lname" value="">
+                        </div>
 
-              <input type="submit" value="Submit" class="form__btn">
+                        <div class="row__large-4">
+                                <input type="submit" value="Submit" class="form__btn">
+                        </div>
+                    </div>
+
             </form>
 
            
 
             <h2 class="headline">Persons already inserted</h2>
-
-            <table class="blueTable">
-                <thead>
-                    <tr>
-                        <th><label>First Name</label></th>
-                        <th><label>Last Name</label></th>
-                        <th><label>Metrics Name</label></th>
-                    </tr>
-                </thead>
-                
-                <tbody>
-                    
-                </tbody>   
-                
-                <!-- <tfoot>
-                    <tr>
-                    <td colspan="4">
-                    <div class="links">
-                        <a href="#">&laquo;</a> 
-                        <a href="#">&lt;</a> 
-                        <a class="active" href="#">1</a>
-                        <a href="#">&gt;</a> 
-                        <a href="#">&raquo;</a></div>
-                    </td>
-                    </tr>
-                  </tfoot> -->
-
-            </table>
-
-             
+            <div class="wrapper__table">
+                    <table class="blueTable">
+                            <thead>
+                                <tr>
+                                    <th><label>First Name</label></th>
+                                    <th><label>Last Name</label></th>
+                                    <th><label>Metrics Name</label></th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                                <tr>
+                                </tr>
+                            </tbody>   
+                            
+                            <!-- <tfoot>
+                                <tr>
+                                <td colspan="4">
+                                <div class="links">
+                                    <a href="#">&laquo;</a> 
+                                    <a href="#">&lt;</a> 
+                                    <a class="active" href="#">1</a>
+                                    <a href="#">&gt;</a> 
+                                    <a href="#">&raquo;</a></div>
+                                </td>
+                                </tr>
+                              </tfoot> -->
+            
+                        </table>
+            </div>
+            
           
         </div>
     </div>
 
-    <div class="row__medium-6">
+    <div class="row__large-6">
 
         <div class="wrapper"> 
                 <div class="metrics">
 
                         <h2 class="headline">Metrics</h2>
-
     
                         <div class="row">
                             <div class="row__medium-6">
