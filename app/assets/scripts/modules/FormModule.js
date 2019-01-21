@@ -15,12 +15,13 @@ class FormModule {
     _validate(firstName, lastName){
         console.log(firstName);
         console.log(lastName);
-         return  (firstName!=null && firstName !== '' &&
-                    lastName!=null && lastName!== '') ?  true : false;
+        return  (firstName!=null && firstName !== '' &&
+                lastName!=null && lastName!== '') ?  true : false;
     }
 
     onSubmit(e) {
         e.preventDefault();
+        console.log("response");
         let firstName = document.getElementById('fname').value,
             lastName = document.getElementById('lname').value; 
 

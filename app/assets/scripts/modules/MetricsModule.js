@@ -9,7 +9,7 @@ class MetricsModule {
         
         for (let i = 0; i < this.buttons.length; i++) {
             this.buttons[i].onclick = this.onClick.bind(this);
-          }
+        }
     }
 
     _setConsecutiveZero(value){

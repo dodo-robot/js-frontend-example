@@ -46,9 +46,9 @@ class TableModule {
         let that = this;
         axios.get('http://localhost:8080/api/v1/persons')
         .then(function (response) {
-          
             response.data.forEach(element => {
-                that._insertData(element);
+                if(!document.getElementById(element.id))
+                    that._insertData(element);
             })
             
             var metricsModule = new MetricsModule();

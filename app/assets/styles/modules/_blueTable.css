@@ -2,6 +2,7 @@
   border-collapse: collapse;
   margin: 0 auto;
   width: 90%;
+ 
 
   & table{
     border: 1px solid #1C6EA4;
@@ -28,7 +29,7 @@
   & tbody{
     display: block;
     overflow-y:auto;
-    height:400px;
+    height: 25rem!important;
     width:100%;
 
     & td {
