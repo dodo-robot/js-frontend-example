@@ -659,6 +659,31 @@ a {
     
 }
 
+.form__input{
+        padding:.25rem;
+        border-radius: 2%;
+        margin: 10px;
+        float: right;
+        width: 50%;
+    }
+
+.form__label{
+        margin: 10px;
+        margin-top: 18px;
+        float: left;
+        position:relative;
+    }
+
+.form__btn{
+            padding: .35rem;
+            width: 50%;
+            margin: 0 10px;
+            float: right;
+            font-size: 1rem;
+            -webkit-transform: translateY(65%);
+                    transform: translateY(65%);
+    }
+
 .form__btn{
         display: block;
         border: none;
@@ -721,24 +746,13 @@ a {
 
 @media (min-width: 800px) {
 
-        
-        .form__btn{
-            padding: .35rem;
-            width: 50%;
-            margin: 0 10px;
-            float: right;
-            font-size: 1rem;
-            -webkit-transform: translateY(65%);
-                    transform: translateY(65%);
-        }
-
    
         .form__input{
             padding:.25rem;
             border-radius: 2%;
             margin: 10px;
             float: right;
-            width: 80%;
+            width: 80%!important;
         }
 
         .form__label{
@@ -751,22 +765,21 @@ a {
 
 @media (min-width: 530px) {
 
-.form{
-/* 
-        &__input{
+
+         .form__input{
             padding:.25rem;
             border-radius: 2%;
-            margin:0px;
-            width: 100%;
+            margin: 10px;
+            float: right;
+            width: 70%!important;
         }
 
-        &__label{
+        .form__label{
+            margin: 10px;
+            margin-top: 18px;
+            float: left;
             position:relative;
-            top:-5px;
-        } */
-
-    
-}
+        }
     }
 
 .headline{
@@ -887,6 +900,7 @@ a {
     text-align: left;
     padding-right: 50px;
     padding-left: 50px;
+    margin-bottom: 50px;
 
     
 

@@ -5,6 +5,7 @@
     text-align: left;
     padding-right: 50px;
     padding-left: 50px;
+    margin-bottom: 50px;
 
     & .headline{
         margin-bottom: 150px;
